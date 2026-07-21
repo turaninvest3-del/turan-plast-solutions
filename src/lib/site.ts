@@ -5,6 +5,6 @@ export const WHATSAPP_HREF = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP
 export const PHONE_DISPLAY = "+7 727 327 01 77";
 export const PHONE_HREF = "tel:+77273270177";
 export const EMAIL = "turanplast@bk.ru";
-export const ADDRESS = "Казахстан, г. Алматы, пр-т Рыскулова, 95а";
+export const ADDRESS = "Казахстан, г. Алматы, ул. Земнухова 3Б";
 export const SITE = "turaninvestplast.kz";
 export const COMPANY = "ТОО «Туран Инвест Пласт»";

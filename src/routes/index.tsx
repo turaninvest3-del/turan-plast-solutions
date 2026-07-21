@@ -286,7 +286,7 @@ function About() {
         </Reveal>
         <Reveal delay={100}>
           <div className="grid grid-cols-2 gap-4">
-            <StatCard label="Производство" value="Алматы" hint="пр-т Рыскулова, 95а" />
+            <StatCard label="Производство" value="Алматы" hint="ул. Земнухова 3Б" />
             <StatCard label="Материал" value="HDPE" hint="100% первичный полиэтилен" />
             <StatCard label="Партии" value="Гибкие" hint="от 20 000 ₸ на первую поставку" />
             <StatCard label="Сертификат" value="ТР ТС" hint="005/2011 — пищевая" />
