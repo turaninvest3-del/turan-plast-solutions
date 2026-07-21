@@ -288,7 +288,7 @@ function About() {
             <StatCard label="Производство" value="Алматы" hint="ул. Земнухова 3Б" />
             <StatCard label="Материал" value="HDPE" hint="100% первичный полиэтилен" />
             <StatCard label="Партии" value="Гибкие" hint="от 20 000 ₸ на первую поставку" />
-            <StatCard label="Сертификат" value="ТР ТС" hint="005/2011 — пищевая" />
+            <StatCard label="Сертификат" value="ТР ТС" hint="005/2011 - пищевой HDPE" />
           </div>
         </Reveal>
       </div>
