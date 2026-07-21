@@ -177,8 +177,8 @@ function Hero() {
           <Badge className="mb-5 border-white/20 bg-white/10 text-white hover:bg-white/15">
             Производство в Алматы · сертификат ТР ТС 005/2011
           </Badge>
-          <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            Пакеты для вашего магазина —{" "}
+          <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl whitespace-pre-line">
+            Пакеты для вашего магазина&nbsp;{"\n"}-&nbsp;
             <span className="relative inline-block">
               <span className="relative z-10">без переплат</span>
               <span
