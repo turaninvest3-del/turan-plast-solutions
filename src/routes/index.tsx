@@ -180,7 +180,7 @@ function Hero() {
           <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
             Пакеты для вашего магазина —{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">без переплаты за склад</span>
+              <span className="relative z-10">без переплат</span>
               <span
                 aria-hidden
                 className="absolute inset-x-0 bottom-1 -z-0 h-3 rounded bg-highlight/70 md:h-4"
