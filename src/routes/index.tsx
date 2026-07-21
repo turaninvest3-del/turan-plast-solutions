@@ -60,7 +60,6 @@ const NAV = [
   { href: "#about", label: "О нас" },
   { href: "#products", label: "Продукция" },
   { href: "#why", label: "Преимущества" },
-  { href: "#price", label: "Прайс" },
   { href: "#partners", label: "Партнёры" },
   { href: "#reviews", label: "Отзывы" },
   { href: "#contacts", label: "Контакты" },
@@ -77,7 +76,6 @@ function LandingPage() {
         <WhyUs />
         <HowWeWork />
         <Partners />
-        <PriceTable />
         <Reviews />
         <Faq />
         <Contacts />
@@ -315,6 +313,7 @@ type Product = {
   size: string;
   qty: string;
   purpose: string;
+  price?: string;
   image?: string;
 };
 
@@ -417,17 +416,8 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 <RowMeta label="Размер" value={p.size} />
                 <RowMeta label="Кол-во" value={p.qty} />
                 <RowMeta label="Назначение" value={p.purpose} />
+                <RowMeta label="Цена" value={p.price ?? "По запросу"} />
               </div>
-              <Button
-                asChild
-                variant="outline"
-                className="mt-4 w-full border-primary/30 text-primary hover:bg-primary-soft hover:text-primary-deep"
-              >
-                <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                  Узнать цену в WhatsApp
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
             </CardContent>
           </Card>
         </Reveal>
@@ -545,96 +535,6 @@ function Partners() {
                 {p}
               </div>
             ))}
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
-const PRICE_ROWS = [
-  { name: "Майка-бомба", size: "25 × 43 см", qty: "300 шт/рул.", density: "HDPE", purpose: "На кассу" },
-  { name: "Мини-майка", size: "20 × 34 см", qty: "180 шт/рул.", density: "HDPE", purpose: "На кассу" },
-  { name: "Майка 30×50", size: "30 × 50 см", qty: "50 шт/уп.", density: "HDPE", purpose: "Крупные покупки" },
-  { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", density: "HDPE", purpose: "На продажу (полка)" },
-  { name: "Майка 400", size: "30 × 50 см", qty: "400 шт/уп.", density: "HDPE", purpose: "На продажу (полка)" },
-  { name: "Фасовка-бомба", size: "25 × 36 см", qty: "450 шт/рул.", density: "HDPE", purpose: "Расфасовка" },
-  { name: "Мини фасовка", size: "18 × 23 см", qty: "250 шт/рул.", density: "HDPE", purpose: "Расфасовка" },
-  { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", density: "HDPE", purpose: "На продажу (полка)" },
-  { name: "Мусорные пакеты", size: "разные", qty: "по запросу", density: "—", purpose: "Закупной ассортимент" },
-];
-
-function PriceTable() {
-  return (
-    <section id="price" className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <Reveal>
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <SectionEyebrow>Прайс</SectionEyebrow>
-              <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
-                Актуальный прайс — по запросу в WhatsApp
-              </h2>
-              <p className="mt-3 max-w-2xl text-muted-foreground">
-                Цены зависят от партии и способа получения. Ответим в течение
-                рабочего часа и пришлём подборку под ваш формат точки.
-              </p>
-            </div>
-            <Button asChild size="lg" className="h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-              <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5" /> Получить прайс
-              </a>
-            </Button>
-          </div>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead className="bg-primary-soft/70 text-left text-xs uppercase tracking-wider text-primary-deep">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold">Наименование</th>
-                    <th className="px-4 py-3 font-semibold">Размер</th>
-                    <th className="px-4 py-3 font-semibold">Кол-во</th>
-                    <th className="px-4 py-3 font-semibold">Материал</th>
-                    <th className="px-4 py-3 font-semibold">Назначение</th>
-                    <th className="px-4 py-3 text-right font-semibold">Цена</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {PRICE_ROWS.map((r, i) => (
-                    <tr
-                      key={r.name}
-                      className={
-                        "border-t border-border transition-colors hover:bg-primary-soft/40 " +
-                        (i % 2 ? "bg-secondary/40" : "")
-                      }
-                    >
-                      <td className="px-4 py-3 font-semibold text-foreground">{r.name}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{r.size}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{r.qty}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{r.density}</td>
-                      <td className="px-4 py-3">
-                        <Badge variant="secondary" className="bg-primary-soft text-primary-deep">
-                          {r.purpose}
-                        </Badge>
-                      </td>
-                      <td className="px-4 py-3 text-right">
-                        <a
-                          href={WHATSAPP_HREF}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-deep"
-                        >
-                          Узнать <ArrowRight className="h-3.5 w-3.5" />
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
           </div>
         </Reveal>
       </div>
