@@ -60,7 +60,6 @@ const NAV = [
   { href: "#about", label: "О нас" },
   { href: "#products", label: "Продукция" },
   { href: "#why", label: "Преимущества" },
-  { href: "#price", label: "Прайс" },
   { href: "#partners", label: "Партнёры" },
   { href: "#reviews", label: "Отзывы" },
   { href: "#contacts", label: "Контакты" },
@@ -77,7 +76,6 @@ function LandingPage() {
         <WhyUs />
         <HowWeWork />
         <Partners />
-        <PriceTable />
         <Reviews />
         <Faq />
         <Contacts />
@@ -315,6 +313,7 @@ type Product = {
   size: string;
   qty: string;
   purpose: string;
+  price?: string;
   image?: string;
 };
 
@@ -417,17 +416,8 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 <RowMeta label="Размер" value={p.size} />
                 <RowMeta label="Кол-во" value={p.qty} />
                 <RowMeta label="Назначение" value={p.purpose} />
+                <RowMeta label="Цена" value={p.price ?? "По запросу"} />
               </div>
-              <Button
-                asChild
-                variant="outline"
-                className="mt-4 w-full border-primary/30 text-primary hover:bg-primary-soft hover:text-primary-deep"
-              >
-                <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                  Узнать цену в WhatsApp
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
             </CardContent>
           </Card>
         </Reveal>
