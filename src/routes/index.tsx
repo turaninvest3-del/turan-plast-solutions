@@ -531,8 +531,7 @@ function Partners() {
               </h2>
             </div>
             <p className="max-w-md text-sm text-muted-foreground">
-              Крупные сети закупают у нас пакеты для развесных товаров и круп.
-              Средние сети и магазины у дома — приоритетное направление сейчас.
+              {"\n"}
             </p>
           </div>
         </Reveal>
