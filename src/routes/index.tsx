@@ -178,12 +178,12 @@ function Hero() {
             Производство в Алматы · сертификат ТР ТС 005/2011
           </Badge>
           <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl whitespace-pre-line">
-            Пакеты для вашего магазина&nbsp;{"\n"}-&nbsp;
+            Пакеты для вашего магазина&nbsp;{"\n"}
             <span className="relative inline-block">
-              <span className="relative z-10">без переплат</span>
+              <span className="relative z-10">-&nbsp;без переплат</span>
               <span
                 aria-hidden
-                className="absolute inset-x-0 bottom-1 -z-0 h-3 rounded bg-highlight/70 md:h-4"
+                className="absolute inset-x-0 bottom-0 -z-0 h-2 rounded bg-highlight/70 md:h-2.5"
               />
             </span>
           </h1>
