@@ -42,6 +42,11 @@ import { WhatsAppFab } from "@/components/WhatsAppFab";
 import bagHandle from "@/assets/bag-handle.jpg.asset.json";
 import bagFlat from "@/assets/bag-flat.jpg.asset.json";
 import pricelistHero from "@/assets/pricelist-hero.jpg.asset.json";
+import magnumLogo from "@/assets/magnum.png.asset.json";
+import toimartLogo from "@/assets/toimart.png.asset.json";
+import galmartLogo from "@/assets/galmart.webp.asset.json";
+import metroLogo from "@/assets/metro.png.asset.json";
+import smallLogo from "@/assets/small.png.asset.json";
 import {
   WHATSAPP_HREF,
   PHONE_DISPLAY,
