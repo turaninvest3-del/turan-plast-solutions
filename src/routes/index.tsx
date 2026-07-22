@@ -45,7 +45,7 @@ import pricelistHero from "@/assets/pricelist-hero.jpg.asset.json";
 import magnumLogo from "@/assets/magnum.png.asset.json";
 import toimartLogo from "@/assets/toimart.png.asset.json";
 import galmartLogo from "@/assets/galmart.webp.asset.json";
-import metroLogo from "@/assets/metro.png.asset.json";
+const metroLogo = { url: "/assets/partners/Logo_METRO.svg.webp" };
 import smallLogo from "@/assets/small.png.asset.json";
 import {
   WHATSAPP_HREF,
@@ -552,21 +552,21 @@ function Partners() {
           </div>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-8 grid grid-cols-6 gap-2 sm:gap-3">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="grid h-20 place-items-center rounded-xl border border-dashed border-primary/30 bg-background p-3 transition-colors hover:border-primary hover:bg-primary-soft"
+                className="flex h-16 items-center justify-center rounded-xl border border-dashed border-primary/30 bg-background p-2 transition-colors hover:border-primary hover:bg-primary-soft sm:h-20 sm:p-3"
               >
                 {p.logo ? (
                   <img
                     src={p.logo}
                     alt={p.name}
-                    className="max-h-full max-w-full object-contain"
+                    className="h-full w-full object-contain"
                     loading="lazy"
                   />
                 ) : (
-                  <span className="font-display text-sm font-bold text-primary-deep">{p.name}</span>
+                  <span className="text-center font-display text-xs font-bold text-primary-deep sm:text-sm">{p.name}</span>
                 )}
               </div>
             ))}
