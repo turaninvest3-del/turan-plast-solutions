@@ -173,7 +173,7 @@ function Hero() {
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:gap-8 md:px-6 md:py-24">
         <Reveal>
           <Badge className="mb-5 border-white/20 bg-white/10 text-white hover:bg-white/15">
-            Производство в Алматы ·&nbsp;
+            &nbsp;· Производство в Алматы
           </Badge>
           <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl whitespace-pre-line">
             Пакеты для вашего магазина&nbsp;{"\n"}
