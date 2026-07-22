@@ -449,8 +449,9 @@ function WhyUs() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <SectionEyebrow>Почему выбирают нас</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold md:text-4xl">
-            Скорость и гибкость, которую крупные заводы не дают
+          <h2 className="mt-3 max-w-3xl whitespace-pre-line font-display text-3xl font-extrabold md:text-4xl">
+            Скорость и гибкость&nbsp;
+            <span className="text-primary">{"\n"}- под ваш ритм продаж</span>
           </h2>
         </Reveal>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
