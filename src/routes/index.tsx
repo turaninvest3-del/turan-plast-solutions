@@ -357,7 +357,7 @@ function Products() {
               <div>
                 <div className="font-display font-bold">Для магазина: касса и расфасовка</div>
                 <div className="text-xs text-muted-foreground">
-                  Без потребительской упаковки — рулоны и связки
+                  Без потребительской упаковки
                 </div>
               </div>
             </TabsTrigger>
@@ -369,7 +369,7 @@ function Products() {
               <div>
                 <div className="font-display font-bold">На продажу вашим покупателям</div>
                 <div className="text-xs text-muted-foreground">
-                  Упакованные позиции 200/400 шт — готовы к полке
+                  Упакованные позиции -&nbsp;готовы к полке
                 </div>
               </div>
             </TabsTrigger>
