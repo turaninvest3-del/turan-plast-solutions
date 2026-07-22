@@ -522,7 +522,14 @@ function HowWeWork() {
 }
 
 function Partners() {
-  const partners = ["Magnum", "Toimart", "Galmart", "Metro", "Small", "Оптовые рынки"];
+  const partners: { name: string; logo?: string }[] = [
+    { name: "Magnum", logo: magnumLogo.url },
+    { name: "Toimart", logo: toimartLogo.url },
+    { name: "Galmart", logo: galmartLogo.url },
+    { name: "Metro", logo: metroLogo.url },
+    { name: "Small", logo: smallLogo.url },
+    { name: "Оптовые рынки" },
+  ];
   return (
     <section id="partners" className="border-y border-border bg-primary-soft/40 py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
@@ -543,10 +550,19 @@ function Partners() {
           <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {partners.map((p) => (
               <div
-                key={p}
-                className="grid h-16 place-items-center rounded-xl border border-dashed border-primary/30 bg-background font-display text-sm font-bold text-primary-deep transition-colors hover:border-primary hover:bg-primary-soft"
+                key={p.name}
+                className="grid h-20 place-items-center rounded-xl border border-dashed border-primary/30 bg-background p-3 transition-colors hover:border-primary hover:bg-primary-soft"
               >
-                {p}
+                {p.logo ? (
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="font-display text-sm font-bold text-primary-deep">{p.name}</span>
+                )}
               </div>
             ))}
           </div>
