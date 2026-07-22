@@ -329,9 +329,17 @@ const PRODUCTS_STORE: Product[] = [
 
 const PRODUCTS_RESELL: Product[] = [
   { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagHandle.url },
-  { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagFlat.url },
   { name: "Майка 400", size: "30 × 50 см", qty: "400 шт/уп.", purpose: "Крупная фасовка на полку" },
-  { name: "Мусорные пакеты", size: "разные", qty: "по запросу", purpose: "Закупной ассортимент" },
+  { name: "Пакеты BIO", size: "уточняется", qty: "уточняется", purpose: "Биоразлагаемые пакеты" },
+  { name: "Пакеты для заморозки", size: "уточняется", qty: "уточняется", purpose: "Для хранения и заморозки" },
+  { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagFlat.url },
+  { name: "Мини-Майка", size: "20 × 34 см", qty: "уточняется", purpose: "На кассу — малый формат" },
+  { name: "Мини-Фасовка", size: "18 × 23 см", qty: "уточняется", purpose: "Мелкая расфасовка" },
+  { name: "Пакет Садака", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку" },
+  { name: "Пакет SHIVAKI", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку" },
+  { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "уточняется", purpose: "Зип-пакеты для мелочи" },
+  { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "уточняется", purpose: "Зип-пакеты средние" },
+  { name: "Zip-Lock", size: "разные", qty: "по запросу", purpose: "Зип-пакеты, ассортимент" },
 ];
 
 function Products() {
@@ -418,7 +426,10 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 <RowMeta label="Размер" value={p.size} />
                 <RowMeta label="Кол-во" value={p.qty} />
                 <RowMeta label="Назначение" value={p.purpose} />
-                <RowMeta label="Цена" value={p.price ?? "По запросу"} />
+              </div>
+              <div className="mt-4 flex items-center justify-between rounded-lg border border-primary/20 bg-primary-soft/70 px-4 py-3">
+                <span className="text-sm font-semibold uppercase tracking-wide text-primary-deep">Цена</span>
+                <span className="font-display text-2xl font-extrabold text-primary-deep">{p.price ?? "По запросу"}</span>
               </div>
             </CardContent>
           </Card>
