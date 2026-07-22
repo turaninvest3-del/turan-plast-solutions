@@ -509,7 +509,7 @@ function HowWeWork() {
 }
 
 function Partners() {
-  const partners = ["Magnum", "Toimart", "Galmart", "Магазины у дома", "Дистрибьюторы", "Оптовые рынки"];
+  const partners = ["Magnum", "Toimart", "Galmart", "Metro", "Small", "Оптовые рынки"];
   return (
     <section id="partners" className="border-y border-border bg-primary-soft/40 py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
