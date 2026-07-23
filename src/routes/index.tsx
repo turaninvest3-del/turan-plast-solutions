@@ -404,7 +404,7 @@ function Products() {
 
 function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-3">
       {items.map((p, i) => (
         <Reveal key={p.name} delay={i * 60}>
           <Card className="group h-full overflow-hidden border-border transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
@@ -418,23 +418,23 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 />
               ) : (
                 <div className="grid h-full place-items-center text-primary/40">
-                  <Package className="h-16 w-16" strokeWidth={1.2} />
+                  <Package className="h-9 w-9 md:h-16 md:w-16" strokeWidth={1.2} />
                 </div>
               )}
-              <Badge className="absolute left-3 top-3 bg-background/90 text-primary-deep hover:bg-background">
+              <Badge className="absolute left-2 top-2 px-1.5 py-0.5 text-[10px] bg-background/90 text-primary-deep hover:bg-background md:left-3 md:top-3 md:px-2.5 md:py-0.5 md:text-xs">
                 {badge}
               </Badge>
             </div>
-            <CardContent className="p-5">
-              <div className="font-display text-lg font-bold">{p.name}</div>
-              <div className="mt-3 space-y-1.5 text-sm">
+            <CardContent className="p-3 md:p-5">
+              <div className="font-display text-sm font-bold leading-tight md:text-lg">{p.name}</div>
+              <div className="mt-2 space-y-1 text-[11px] md:mt-3 md:space-y-1.5 md:text-sm">
                 <RowMeta label="Размер" value={p.size} />
                 <RowMeta label="Кол-во" value={p.qty} />
                 <RowMeta label="Назначение" value={p.purpose} />
               </div>
-              <div className="mt-4 flex items-center justify-between rounded-lg border border-primary/20 bg-primary-soft/70 px-4 py-3">
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary-deep">Цена</span>
-                <span className="font-display text-2xl font-extrabold text-primary-deep">{p.price ?? "По запросу"}</span>
+              <div className="mt-3 flex items-center justify-between rounded-lg border border-primary/20 bg-primary-soft/70 px-2.5 py-1.5 md:mt-4 md:px-4 md:py-3">
+                <span className="text-[10px] font-semibold uppercase tracking-wide text-primary-deep md:text-sm">Цена</span>
+                <span className="font-display text-base font-extrabold text-primary-deep md:text-2xl">{p.price ?? "По запросу"}</span>
               </div>
             </CardContent>
           </Card>
@@ -446,7 +446,7 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
 
 function RowMeta({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between gap-3 border-b border-dashed border-border/70 pb-1.5 last:border-0 last:pb-0">
+    <div className="flex justify-between gap-2 border-b border-dashed border-border/70 pb-1 last:border-0 last:pb-0 md:gap-3 md:pb-1.5">
       <span className="text-muted-foreground">{label}</span>
       <span className="text-right font-medium text-foreground">{value}</span>
     </div>
