@@ -175,12 +175,12 @@ function Hero() {
             "radial-gradient(circle at 20% 20%, oklch(0.85 0.15 90 / 0.35), transparent 40%), radial-gradient(circle at 80% 60%, oklch(0.7 0.14 210 / 0.35), transparent 45%)",
         }}
       />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:gap-8 md:px-6 md:py-24">
+      <div className="relative mx-auto grid max-w-7xl gap-6 px-4 py-10 md:grid-cols-2 md:items-center md:gap-8 md:px-6 md:py-24">
         <Reveal>
-          <Badge className="mb-5 border-white/20 bg-white/10 text-white hover:bg-white/15">
+          <Badge className="mb-3 border-white/20 bg-white/10 text-white hover:bg-white/15 md:mb-5">
             &nbsp;· Производство в Алматы
           </Badge>
-          <h1 className="font-display text-4xl font-black leading-[1.05] tracking-tight md:text-6xl whitespace-pre-line">
+          <h1 className="font-display text-3xl font-black leading-[1.05] tracking-tight md:text-6xl whitespace-pre-line">
             Пакеты для вашего магазина&nbsp;{"\n"}
             <span className="relative inline-block">
               <span className="relative z-10">-&nbsp;без переплат</span>
@@ -190,36 +190,36 @@ function Hero() {
               />
             </span>
           </h1>
-          <p className="mt-6 max-w-xl text-base text-white/80 md:text-lg">
+          <p className="mt-4 max-w-xl text-sm text-white/80 md:mt-6 md:text-lg">
             Собственное производство пакетов майка и фасовка в Алматы.
             Небольшие партии, быстрая отгрузка, повторный заказ — одним
             сообщением в WhatsApp.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2.5 md:mt-8 md:gap-3">
             <Button
               asChild
               size="lg"
-              className="h-12 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90"
+              className="h-10 bg-whatsapp px-4 text-whatsapp-foreground hover:bg-whatsapp/90 md:h-12 md:px-6"
             >
               <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5" /> Написать в WhatsApp
+                <MessageCircle className="mr-2 h-4 w-4 md:h-5 md:w-5" /> Написать в WhatsApp
               </a>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="h-12 border-white/30 bg-transparent px-6 text-white hover:bg-white/10 hover:text-white"
+              className="h-10 border-white/30 bg-transparent px-4 text-white hover:bg-white/10 hover:text-white md:h-12 md:px-6"
             >
               <a href={PHONE_HREF}>
-                <Phone className="mr-2 h-5 w-5" /> {PHONE_DISPLAY}
+                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" /> {PHONE_DISPLAY}
               </a>
             </Button>
           </div>
         </Reveal>
 
         <Reveal delay={120} className="relative">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl md:max-w-md">
             <img
               src={pricelistHero.url}
               alt="Ассортимент пакетов Туран Инвест Пласт"
@@ -239,7 +239,7 @@ function Hero() {
       </div>
 
       <div className="relative border-t border-white/10 bg-black/10">
-        <div className="mx-auto grid max-w-7xl gap-y-4 px-4 py-5 text-sm text-white/90 md:grid-cols-4 md:px-6">
+        <div className="mx-auto grid max-w-7xl gap-y-2 px-4 py-3 text-xs text-white/90 md:grid-cols-4 md:gap-y-4 md:px-6 md:py-5 md:text-sm">
           {[
             { icon: Factory, text: "Собственное производство" },
             { icon: Truck, text: "Доставка от 20 000 ₸" },
@@ -247,7 +247,7 @@ function Hero() {
             { icon: Check, text: "Сертификат ТР ТС 005/2011" },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-center gap-2">
-              <Icon className="h-4 w-4 text-highlight" />
+              <Icon className="h-3.5 w-3.5 text-highlight md:h-4 md:w-4" />
               <span>{text}</span>
             </div>
           ))}
@@ -259,35 +259,35 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="border-b border-border bg-primary-soft/40 py-16 md:py-20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.1fr_1fr] md:items-center md:px-6">
+    <section id="about" className="border-b border-border bg-primary-soft/40 py-10 md:py-20">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-10 md:px-6">
         <Reveal>
           <SectionEyebrow>О компании</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-3 font-display text-xl font-extrabold md:text-4xl">
             Производим пакеты в Алматы — работаем напрямую с торговыми точками
           </h2>
-          <p className="mt-5 text-muted-foreground md:text-lg">
+          <p className="mt-4 text-sm text-muted-foreground md:mt-5 md:text-lg">
             ТОО «Туран Инвест Пласт» — производство полиэтиленовых пакетов из
             100% пищевого HDPE. Выпускаем пакеты&nbsp;<b>майка</b> (с ручками) для
             кассы и <b>фасовка</b> (без ручек) для расфасовки товара, а также
             готовые упакованные позиции на полку.
           </p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2 md:mt-6 md:gap-3">
             {[
               "Без посредников — прямая цена от производителя",
               "Обход торгового представителя по Алматы",
               "Официальный договор, работа с ИП и ТОО",
               "Работаем и с сетями, и с точками у дома",
             ].map((t) => (
-              <li key={t} className="flex items-start gap-2 text-sm">
-                <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+              <li key={t} className="flex items-start gap-1.5 text-xs md:text-sm">
+                <Check className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-primary md:h-4 md:w-4" />
                 <span>{t}</span>
               </li>
             ))}
           </ul>
         </Reveal>
         <Reveal delay={100}>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
             <StatCard label="Производство" value="Алматы" hint="ул. Земнухова 3Б" />
             <StatCard label="Материал" value="HDPE" hint="100% первичный полиэтилен" />
             <StatCard label="Партии" value="Гибкие" hint="от 20 000 ₸ на первую поставку" />
@@ -301,14 +301,14 @@ function About() {
 
 function StatCard({ label, value, hint }: { label: string; value: string; hint: string }) {
   return (
-    <div className="rounded-xl border border-border bg-card p-5 transition-shadow hover:shadow-md">
-      <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+    <div className="rounded-xl border border-border bg-card p-3 transition-shadow hover:shadow-md md:p-5">
+      <div className="text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground md:text-xs">
         {label}
       </div>
-      <div className="mt-2 font-display text-2xl font-extrabold text-primary-deep">
+      <div className="mt-1.5 font-display text-lg font-extrabold text-primary-deep md:mt-2 md:text-2xl">
         {value}
       </div>
-      <div className="mt-1 text-xs text-muted-foreground">{hint}</div>
+      <div className="mt-1 text-[0.65rem] text-muted-foreground md:text-xs">{hint}</div>
     </div>
   );
 }
@@ -349,51 +349,51 @@ const PRODUCTS_RESELL: Product[] = [
 
 function Products() {
   return (
-    <section id="products" className="py-16 md:py-24">
+    <section id="products" className="py-10 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <SectionEyebrow>Продукция</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-3 max-w-3xl font-display text-xl font-extrabold md:text-4xl">
             Две линейки под разные задачи магазина
           </h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground md:mt-4 md:text-base">
             Прозрачные пакеты без печати — для собственных нужд точки и готовые
             упакованные позиции для продажи вашим покупателям.
           </p>
         </Reveal>
 
-        <Tabs defaultValue="store" className="mt-8">
+        <Tabs defaultValue="store" className="mt-6 md:mt-8">
           <TabsList className="grid h-auto w-full grid-cols-1 gap-2 bg-transparent p-0 sm:grid-cols-2">
             <TabsTrigger
               value="store"
-              className="flex h-auto items-start gap-3 rounded-xl border border-border bg-card p-4 text-left data-[state=active]:border-primary data-[state=active]:bg-primary-soft data-[state=active]:shadow-sm"
+              className="flex h-auto items-start gap-2 rounded-xl border border-border bg-card p-3 text-left data-[state=active]:border-primary data-[state=active]:bg-primary-soft data-[state=active]:shadow-sm md:gap-3 md:p-4"
             >
-              <Package className="mt-0.5 h-5 w-5 text-primary" />
+              <Package className="mt-0.5 h-4 w-4 text-primary md:h-5 md:w-5" />
               <div>
-                <div className="font-display font-bold">Для магазина: касса и расфасовка</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="font-display text-sm font-bold md:text-base">Для магазина: касса и расфасовка</div>
+                <div className="text-[0.65rem] text-muted-foreground md:text-xs">
                   Без потребительской упаковки
                 </div>
               </div>
             </TabsTrigger>
             <TabsTrigger
               value="resell"
-              className="flex h-auto items-start gap-3 rounded-xl border border-border bg-card p-4 text-left data-[state=active]:border-primary data-[state=active]:bg-primary-soft data-[state=active]:shadow-sm"
+              className="flex h-auto items-start gap-2 rounded-xl border border-border bg-card p-3 text-left data-[state=active]:border-primary data-[state=active]:bg-primary-soft data-[state=active]:shadow-sm md:gap-3 md:p-4"
             >
-              <ShoppingBag className="mt-0.5 h-5 w-5 text-primary" />
+              <ShoppingBag className="mt-0.5 h-4 w-4 text-primary md:h-5 md:w-5" />
               <div>
-                <div className="font-display font-bold">На продажу вашим покупателям</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="font-display text-sm font-bold md:text-base">На продажу вашим покупателям</div>
+                <div className="text-[0.65rem] text-muted-foreground md:text-xs">
                   Упакованные позиции -&nbsp;готовы к полке
                 </div>
               </div>
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="store" className="mt-8">
+          <TabsContent value="store" className="mt-6 md:mt-8">
             <ProductGrid items={PRODUCTS_STORE} badge="Для магазина" />
           </TabsContent>
-          <TabsContent value="resell" className="mt-8">
+          <TabsContent value="resell" className="mt-6 md:mt-8">
             <ProductGrid items={PRODUCTS_RESELL} badge="На полку" />
           </TabsContent>
         </Tabs>
@@ -404,7 +404,7 @@ function Products() {
 
 function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
   return (
-    <div className="grid grid-cols-2 gap-1.5 sm:gap-5 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-1 sm:gap-5 lg:grid-cols-3">
       {items.map((p, i) => (
         <Reveal key={p.name} delay={i * 60}>
           <Card className="group h-full overflow-hidden border-border transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
@@ -418,23 +418,25 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 />
               ) : (
                 <div className="grid h-full place-items-center text-primary/40">
-                  <Package className="h-6 w-6 sm:h-16 sm:w-16" strokeWidth={1.2} />
+                  <Package className="h-5 w-5 sm:h-16 sm:w-16" strokeWidth={1.2} />
                 </div>
               )}
-              <Badge className="absolute left-1 top-1 bg-background/90 text-[0.55rem] text-primary-deep hover:bg-background sm:left-3 sm:top-3 sm:text-xs">
+              <Badge className="absolute left-1 top-1 bg-background/90 text-[0.5rem] text-primary-deep hover:bg-background sm:left-3 sm:top-3 sm:text-xs">
                 {badge}
               </Badge>
             </div>
-            <CardContent className="p-1.5 sm:p-5">
-              <div className="font-display text-sm font-bold leading-tight sm:text-lg">{p.name}</div>
-              <div className="mt-1 space-y-0.5 text-[0.6rem] sm:mt-3 sm:space-y-1.5 sm:text-sm">
+            <CardContent className="p-1 sm:p-5">
+              <div className="font-display text-xs font-bold leading-tight sm:text-lg">{p.name}</div>
+              <div className="mt-0.5 space-y-0.5 text-[0.55rem] sm:mt-3 sm:space-y-1.5 sm:text-sm">
                 <RowMeta label="Размер" value={p.size} />
                 <RowMeta label="Кол-во" value={p.qty} />
-                <RowMeta label="Назначение" value={p.purpose} />
+                <div className="hidden sm:block">
+                  <RowMeta label="Назначение" value={p.purpose} />
+                </div>
               </div>
-              <div className="mt-1.5 flex items-center justify-between rounded-md border border-primary/20 bg-primary-soft/70 px-1.5 py-1 sm:mt-4 sm:rounded-lg sm:px-4 sm:py-3">
-                <span className="text-[0.55rem] font-semibold uppercase tracking-wide text-primary-deep sm:text-sm">Цена</span>
-                <span className="font-display text-xs font-extrabold text-primary-deep sm:text-2xl">{p.price ?? "По запросу"}</span>
+              <div className="mt-1 flex items-center justify-between rounded-md border border-primary/20 bg-primary-soft/70 px-1 py-0.5 sm:mt-4 sm:rounded-lg sm:px-4 sm:py-3">
+                <span className="text-[0.5rem] font-semibold uppercase tracking-wide text-primary-deep sm:text-sm">Цена</span>
+                <span className="font-display text-[0.65rem] font-extrabold text-primary-deep sm:text-2xl">{p.price ?? "По запросу"}</span>
               </div>
             </CardContent>
           </Card>
@@ -463,24 +465,24 @@ function WhyUs() {
     { icon: ShieldCheck, title: "Пищевая сертификация", text: "Соответствие ТР ТС 005/2011, HDPE — можно для пищевых продуктов." },
   ];
   return (
-    <section id="why" className="bg-primary-soft/50 py-16 md:py-24">
+    <section id="why" className="bg-primary-soft/50 py-10 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <SectionEyebrow>Почему выбирают нас</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl whitespace-pre-line font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-3 max-w-3xl whitespace-pre-line font-display text-xl font-extrabold md:text-4xl">
             Скорость и гибкость&nbsp;
             <span className="text-primary">{"\n"}- под ваш ритм продаж</span>
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 md:mt-10 md:gap-4 lg:grid-cols-3">
           {items.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={i * 60}>
-              <div className="group h-full rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-primary-deep">
-                  <Icon className="h-5 w-5" />
+              <div className="group h-full rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg md:p-6">
+                <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-primary-deep md:h-11 md:w-11">
+                  <Icon className="h-4 w-4 md:h-5 md:w-5" />
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{text}</p>
+                <h3 className="mt-3 font-display text-sm font-bold md:mt-4 md:text-lg">{title}</h3>
+                <p className="mt-1.5 text-xs text-muted-foreground md:mt-2 md:text-sm">{text}</p>
               </div>
             </Reveal>
           ))}
@@ -499,21 +501,21 @@ function HowWeWork() {
     { n: "05", title: "Повторный заказ", text: "Одно сообщение — и заказ уже в работе." },
   ];
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-10 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <SectionEyebrow>Как мы работаем</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-3 max-w-3xl font-display text-xl font-extrabold md:text-4xl">
             5 шагов от первого контакта до повторного заказа
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-4 md:grid-cols-5">
+        <div className="mt-6 grid gap-3 md:grid-cols-5 md:mt-10 md:gap-4">
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 80}>
-              <div className="relative h-full rounded-2xl border border-border bg-card p-5">
-                <div className="font-display text-3xl font-black text-primary/20">{s.n}</div>
-                <h3 className="mt-2 font-display text-base font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              <div className="relative h-full rounded-2xl border border-border bg-card p-3 md:p-5">
+                <div className="font-display text-2xl font-black text-primary/20 md:text-3xl">{s.n}</div>
+                <h3 className="mt-1.5 font-display text-sm font-bold md:mt-2 md:text-base">{s.title}</h3>
+                <p className="mt-1.5 text-xs text-muted-foreground md:mt-2 md:text-sm">{s.text}</p>
                 {i < steps.length - 1 && (
                   <ArrowRight className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-primary/40 md:block" />
                 )}
@@ -536,27 +538,24 @@ function Partners() {
     { name: "Оптовые рынки" },
   ];
   return (
-    <section id="partners" className="border-y border-border bg-primary-soft/40 py-14">
+    <section id="partners" className="border-y border-border bg-primary-soft/40 py-8 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div className="flex flex-col items-start justify-between gap-2 md:flex-row md:items-end md:gap-4">
             <div>
               <SectionEyebrow>Нам доверяют</SectionEyebrow>
-              <h2 className="mt-3 font-display text-2xl font-extrabold md:text-3xl">
+              <h2 className="mt-2 font-display text-lg font-extrabold md:mt-3 md:text-3xl">
                 Работаем с сетями и независимой розницей
               </h2>
             </div>
-            <p className="max-w-md text-sm text-muted-foreground">
-              {"\n"}
-            </p>
           </div>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-8 grid grid-cols-6 gap-2 sm:gap-3">
+          <div className="mt-5 grid grid-cols-6 gap-1.5 md:mt-8 md:gap-2 sm:md:gap-3">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="flex h-16 items-center justify-center rounded-xl border border-dashed border-primary/30 bg-background p-2 transition-colors hover:border-primary hover:bg-primary-soft sm:h-20 sm:p-3"
+                className="flex h-12 items-center justify-center rounded-lg border border-dashed border-primary/30 bg-background p-1.5 transition-colors hover:border-primary hover:bg-primary-soft sm:h-20 sm:p-3 md:rounded-xl"
               >
                 {p.logo ? (
                   <img
@@ -584,31 +583,31 @@ function Reviews() {
     { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
   ];
   return (
-    <section id="reviews" className="bg-primary-soft/40 py-16 md:py-24">
+    <section id="reviews" className="bg-primary-soft/40 py-10 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <Reveal>
           <SectionEyebrow>Отзывы</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-2 font-display text-xl font-extrabold md:mt-3 md:text-4xl">
             Что говорят наши клиенты
           </h2>
         </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-6 grid gap-3 md:mt-10 md:grid-cols-3 md:gap-5">
           {reviews.map((r, i) => (
             <Reveal key={i} delay={i * 80}>
               <Card className="h-full border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-full bg-primary text-primary-foreground font-display text-lg font-bold">
+                <CardContent className="p-4 md:p-6">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-display text-sm font-bold md:h-12 md:w-12 md:text-lg">
                       {i + 1}
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground">{r.name}</div>
-                      <div className="text-xs text-muted-foreground">
+                      <div className="text-sm font-semibold text-foreground md:text-base">{r.name}</div>
+                      <div className="text-[0.65rem] text-muted-foreground md:text-xs">
                         {r.org} · {r.city}
                       </div>
                     </div>
                   </div>
-                  <p className="mt-5 text-sm italic text-muted-foreground">
+                  <p className="mt-3 text-xs italic text-muted-foreground md:mt-5 md:text-sm">
                     [Текст отзыва — заменить реальной цитатой клиента о работе с
                     Туран Инвест Пласт: гибкость партий, скорость доставки,
                     качество пакетов.]
@@ -633,17 +632,17 @@ function Faq() {
     { q: "Работаете с сетевыми магазинами и дистрибьюторами?", a: "Да. Среди клиентов — Magnum, Toimart, Galmart и другие. Работаем и с несетевой розницей, и с оптовыми покупателями." },
   ];
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1fr_1.6fr] md:px-6">
+    <section className="py-10 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-[1fr_1.6fr] md:gap-10 md:px-6">
         <Reveal>
           <SectionEyebrow>FAQ</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-2 font-display text-xl font-extrabold md:mt-3 md:text-4xl">
             Частые вопросы закупщиков
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground md:mt-4 md:text-base">
             Не нашли ответ? Напишите в WhatsApp — ответим в течение рабочего часа.
           </p>
-          <Button asChild className="mt-6 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
+          <Button asChild className="mt-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90 md:mt-6">
             <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" /> Задать вопрос
             </a>
@@ -652,11 +651,11 @@ function Faq() {
         <Reveal delay={100}>
           <Accordion type="single" collapsible className="rounded-2xl border border-border bg-card">
             {items.map((it, i) => (
-              <AccordionItem key={i} value={`i${i}`} className="border-b border-border px-5 last:border-0">
-                <AccordionTrigger className="text-left font-display text-base font-semibold hover:no-underline">
+              <AccordionItem key={i} value={`i${i}`} className="border-b border-border px-3 md:px-5 last:border-0">
+                <AccordionTrigger className="text-left font-display text-sm font-semibold hover:no-underline md:text-base">
                   {it.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground">
+                <AccordionContent className="text-xs text-muted-foreground md:text-sm">
                   {it.a}
                 </AccordionContent>
               </AccordionItem>
@@ -670,36 +669,36 @@ function Faq() {
 
 function Contacts() {
   return (
-    <section id="contacts" className="bg-primary-soft/50 py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-2 md:px-6">
+    <section id="contacts" className="bg-primary-soft/50 py-10 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-2 md:gap-10 md:px-6">
         <Reveal>
           <SectionEyebrow>Контакты</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
+          <h2 className="mt-2 font-display text-xl font-extrabold md:mt-3 md:text-4xl">
             Пишите или звоните — мы на связи
           </h2>
-          <div className="mt-6 space-y-4">
+          <div className="mt-4 space-y-2.5 md:mt-6 md:space-y-4">
             <ContactRow icon={MapPin} label="Адрес" value={ADDRESS} />
             <ContactRow icon={Phone} label="Телефон" value={PHONE_DISPLAY} href={PHONE_HREF} />
             <ContactRow icon={Mail} label="Email" value={EMAIL} href={`mailto:${EMAIL}`} />
             <ContactRow icon={Globe} label="Сайт" value={SITE} href={`https://${SITE}`} />
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
+          <div className="mt-4 flex flex-wrap gap-2 md:mt-6 md:gap-3">
+            <Button asChild size="lg" className="h-10 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90 md:h-12">
               <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5" /> Написать в WhatsApp
+                <MessageCircle className="mr-2 h-4 w-4 md:h-5 md:w-5" /> Написать в WhatsApp
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 border-primary/30 text-primary-deep">
+            <Button asChild size="lg" variant="outline" className="h-10 border-primary/30 text-primary-deep md:h-12">
               <a href={PHONE_HREF}>
-                <Phone className="mr-2 h-5 w-5" /> Позвонить
+                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" /> Позвонить
               </a>
             </Button>
           </div>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-border">
+          <div className="mt-4 overflow-hidden rounded-xl border border-border md:mt-6 md:rounded-2xl">
             <iframe
               title="Карта — Алматы, ул. Земнухова 3Б"
               src="https://yandex.com/map-widget/v1/?text=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%20%D1%83%D0%BB.%20%D0%97%D0%B5%D0%BC%D0%BD%D1%83%D1%85%D0%BE%D0%B2%D0%B0%203%D0%91"
-              className="h-64 w-full border-0"
+              className="h-44 w-full border-0 md:h-64"
               loading="lazy"
             />
           </div>
@@ -707,15 +706,15 @@ function Contacts() {
 
         <Reveal delay={100}>
           <Card className="border-border">
-            <CardContent className="p-6 md:p-8">
-              <div className="font-display text-xl font-extrabold">
+            <CardContent className="p-4 md:p-6 md:p-8">
+              <div className="font-display text-base font-extrabold md:text-xl">
                 Короткая форма — запасной канал
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <p className="mt-1.5 text-xs text-muted-foreground md:mt-2 md:text-sm">
                 Оставьте контакты — перезвоним и уточним потребности точки.
               </p>
               <form
-                className="mt-6 space-y-4"
+                className="mt-4 space-y-3 md:mt-6 md:space-y-4"
                 onSubmit={(e) => {
                   e.preventDefault();
                   window.open(WHATSAPP_HREF, "_blank");
@@ -724,11 +723,11 @@ function Contacts() {
                 <Input placeholder="Ваше имя" required />
                 <Input placeholder="Магазин / компания" />
                 <Input placeholder="Телефон" type="tel" required />
-                <Textarea placeholder="Что вас интересует?" rows={4} />
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary-deep">
+                <Textarea placeholder="Что вас интересует?" rows={3} />
+                <Button type="submit" size="lg" className="h-10 w-full bg-primary hover:bg-primary-deep md:h-12">
                   Отправить заявку
                 </Button>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-[0.65rem] text-muted-foreground md:text-xs">
                   Нажимая кнопку, вы соглашаетесь с обработкой персональных
                   данных. Быстрее всего —{" "}
                   <a className="underline" href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
@@ -757,15 +756,15 @@ function ContactRow({
   href?: string;
 }) {
   const content = (
-    <div className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/40">
-      <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-lg bg-primary-soft text-primary-deep">
-        <Icon className="h-5 w-5" />
+    <div className="flex items-start gap-2 rounded-xl border border-border bg-card p-3 transition-colors hover:border-primary/40 md:gap-3 md:p-4">
+      <div className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-lg bg-primary-soft text-primary-deep md:h-10 md:w-10">
+        <Icon className="h-4 w-4 md:h-5 md:w-5" />
       </div>
       <div>
-        <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        <div className="text-[0.65rem] font-medium uppercase tracking-wider text-muted-foreground md:text-xs">
           {label}
         </div>
-        <div className="mt-0.5 font-semibold text-foreground">{value}</div>
+        <div className="mt-0.5 text-sm font-semibold text-foreground md:text-base">{value}</div>
       </div>
     </div>
   );
@@ -780,15 +779,15 @@ function ContactRow({
 
 function Footer() {
   return (
-    <footer className="bg-primary-deep py-12 text-primary-foreground">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-4 md:px-6">
+    <footer className="bg-primary-deep py-8 text-primary-foreground md:py-12">
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 md:grid-cols-4 md:gap-8 md:px-6">
         <div className="md:col-span-2">
           <Logo variant="light" />
-          <p className="mt-4 max-w-sm text-sm text-white/70">
+          <p className="mt-3 max-w-sm text-xs text-white/70 md:mt-4 md:text-sm">
             {COMPANY}. Производство полиэтиленовых пакетов HDPE в Алматы.
             Сертификат ТР ТС 005/2011.
           </p>
-          <div className="mt-4 space-y-1 text-sm text-white/80">
+          <div className="mt-3 space-y-1 text-xs text-white/80 md:mt-4 md:text-sm">
             <div>{ADDRESS}</div>
             <div>
               <a href={PHONE_HREF} className="hover:text-white">{PHONE_DISPLAY}</a>
@@ -798,10 +797,10 @@ function Footer() {
           </div>
         </div>
         <div>
-          <div className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-white/60">
+          <div className="mb-2 font-display text-xs font-bold uppercase tracking-wider text-white/60 md:mb-3 md:text-sm">
             Разделы
           </div>
-          <ul className="space-y-2 text-sm text-white/80">
+          <ul className="space-y-1.5 text-xs text-white/80 md:space-y-2 md:text-sm">
             {NAV.map((n) => (
               <li key={n.href}>
                 <a href={n.href} className="hover:text-white">{n.label}</a>
@@ -810,28 +809,28 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <div className="mb-3 font-display text-sm font-bold uppercase tracking-wider text-white/60">
+          <div className="mb-2 font-display text-xs font-bold uppercase tracking-wider text-white/60 md:mb-3 md:text-sm">
             Связь
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5 md:gap-2">
             <a
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground transition hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-md bg-whatsapp px-3 py-1.5 text-xs font-semibold text-whatsapp-foreground transition hover:opacity-90 md:px-4 md:py-2 md:text-sm"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <MessageCircle className="h-3.5 w-3.5 md:h-4 md:w-4" /> WhatsApp
             </a>
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10 md:px-4 md:py-2 md:text-sm"
             >
-              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
+              <Phone className="h-3.5 w-3.5 md:h-4 md:w-4" /> {PHONE_DISPLAY}
             </a>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-xs text-white/50 md:px-6">
+      <div className="mx-auto mt-6 max-w-7xl border-t border-white/10 px-4 pt-4 text-[0.65rem] text-white/50 md:mt-10 md:px-6 md:pt-6 md:text-xs">
         © {new Date().getFullYear()} {COMPANY}. Все права защищены.
       </div>
     </footer>
@@ -840,7 +839,7 @@ function Footer() {
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-deep">
+    <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wider text-primary-deep md:px-3 md:py-1 md:text-xs">
       <span className="h-1.5 w-1.5 rounded-full bg-primary" />
       {children}
     </div>
