@@ -553,11 +553,11 @@ function Partners() {
           </div>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-8 grid grid-cols-6 gap-2 sm:gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-6 md:gap-3">
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="flex h-16 items-center justify-center rounded-xl border border-dashed border-primary/30 bg-background p-2 transition-colors hover:border-primary hover:bg-primary-soft sm:h-20 sm:p-3"
+                className="flex h-24 items-center justify-center rounded-xl border border-dashed border-primary/30 bg-background p-4 transition-colors hover:border-primary hover:bg-primary-soft md:h-20 md:p-3"
               >
                 {p.logo ? (
                   <img
