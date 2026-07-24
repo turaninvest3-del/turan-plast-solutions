@@ -218,7 +218,7 @@ function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="relative">
+        <Reveal delay={120} className="relative hidden md:block">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-2xl">
             <img
               src={pricelistHero.url}
