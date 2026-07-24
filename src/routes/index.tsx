@@ -41,7 +41,7 @@ import { WhatsAppFab } from "@/components/WhatsAppFab";
 import bagHandle from "@/assets/bag-handle.jpg.asset.json";
 import bagFlat from "@/assets/bag-flat.jpg.asset.json";
 import pricelistHero from "@/assets/pricelist-hero.jpg.asset.json";
-import magnumLogo from "@/assets/magnum.png.asset.json";
+import magnumLogo from "@/assets/magnum.jpeg.asset.json";
 import toimartLogo from "@/assets/toimart.png.asset.json";
 import galmartLogo from "@/assets/galmart.webp.asset.json";
 const metroLogo = { url: "/assets/partners/Logo_METRO.svg.webp" };
