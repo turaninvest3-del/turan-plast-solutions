@@ -33,8 +33,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Reveal } from "@/components/Reveal";
 import { Logo } from "@/components/Logo";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
@@ -587,76 +585,30 @@ function Faq() {
 function Contacts() {
   return (
     <section id="contacts" className="bg-primary-soft/50 py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-2 md:px-6">
-        <Reveal>
-          <SectionEyebrow>Контакты</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
-            Пишите или звоните — мы на связи
-          </h2>
-          <div className="mt-6 space-y-4">
-            <ContactRow icon={MapPin} label="Адрес" value={ADDRESS} />
-            <ContactRow icon={Phone} label="Телефон" value={PHONE_DISPLAY} href={PHONE_HREF} />
-            <ContactRow icon={Mail} label="Email" value={EMAIL} href={`mailto:${EMAIL}`} />
-            <ContactRow icon={Globe} label="Сайт" value={SITE} href={`https://${SITE}`} />
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-              <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5" /> Написать в WhatsApp
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 border-primary/30 text-primary-deep">
-              <a href={PHONE_HREF}>
-                <Phone className="mr-2 h-5 w-5" /> Позвонить
-              </a>
-            </Button>
-          </div>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-border">
-            <iframe
-              title="Карта — Алматы, ул. Земнухова 3Б"
-              src="https://yandex.com/map-widget/v1/?text=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%20%D1%83%D0%BB.%20%D0%97%D0%B5%D0%BC%D0%BD%D1%83%D1%85%D0%BE%D0%B2%D0%B0%203%D0%91"
-              className="h-64 w-full border-0"
-              loading="lazy"
-            />
-          </div>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <Card className="border-border">
-            <CardContent className="p-6 md:p-8">
-              <div className="font-display text-xl font-extrabold">
-                Короткая форма — запасной канал
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Оставьте контакты — перезвоним и уточним потребности точки.
-              </p>
-              <form
-                className="mt-6 space-y-4"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  window.open(WHATSAPP_HREF, "_blank");
-                }}
-              >
-                <Input placeholder="Ваше имя" required />
-                <Input placeholder="Магазин / компания" />
-                <Input placeholder="Телефон" type="tel" required />
-                <Textarea placeholder="Что вас интересует?" rows={4} />
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary-deep">
-                  Отправить заявку
-                </Button>
-                <p className="text-xs text-muted-foreground">
-                  Нажимая кнопку, вы соглашаетесь с обработкой персональных
-                  данных. Быстрее всего —{" "}
-                  <a className="underline" href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
-                    написать в WhatsApp
-                  </a>
-                  .
-                </p>
-              </form>
-            </CardContent>
-          </Card>
-        </Reveal>
-      </div>
+      <Reveal className="mx-auto max-w-2xl px-4 text-center md:px-6">
+        <SectionEyebrow>Контакты</SectionEyebrow>
+        <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
+          Пишите или звоните — мы на связи
+        </h2>
+        <div className="mt-8 space-y-4 text-left">
+          <ContactRow icon={MapPin} label="Адрес" value={ADDRESS} />
+          <ContactRow icon={Phone} label="Телефон" value={PHONE_DISPLAY} href={PHONE_HREF} />
+          <ContactRow icon={Mail} label="Email" value={EMAIL} href={`mailto:${EMAIL}`} />
+          <ContactRow icon={Globe} label="Сайт" value={SITE} href={`https://${SITE}`} />
+        </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Button asChild size="lg" className="h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
+            <a href={WHATSAPP_HREF} target="_blank" rel="noreferrer">
+              <MessageCircle className="mr-2 h-5 w-5" /> Написать в WhatsApp
+            </a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="h-12 border-primary/30 text-primary-deep">
+            <a href={PHONE_HREF}>
+              <Phone className="mr-2 h-5 w-5" /> Позвонить
+            </a>
+          </Button>
+        </div>
+      </Reveal>
     </section>
   );
 }
