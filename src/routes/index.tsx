@@ -487,41 +487,6 @@ function WhyUs() {
   );
 }
 
-function HowWeWork() {
-  const steps = [
-    { n: "01", title: "Первый контакт", text: "Пишете в WhatsApp или звоните — уточняем задачи вашей точки." },
-    { n: "02", title: "Подбор ассортимента", text: "Собираем позиции под кассу, развес и полку с покупателями." },
-    { n: "03", title: "Первая поставка", text: "От 20 000 ₸. Отгружаем со склада в Алматы." },
-    { n: "04", title: "Закреплённый представитель", text: "Обходит точку, помогает планировать остатки." },
-    { n: "05", title: "Повторный заказ", text: "Одно сообщение — и заказ уже в работе." },
-  ];
-  return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <Reveal>
-          <SectionEyebrow>Как мы работаем</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold md:text-4xl">
-            5 шагов от первого контакта до повторного заказа
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-4 md:grid-cols-5">
-          {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 80}>
-              <div className="relative h-full rounded-2xl border border-border bg-card p-5">
-                <div className="font-display text-3xl font-black text-primary/20">{s.n}</div>
-                <h3 className="mt-2 font-display text-base font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
-                {i < steps.length - 1 && (
-                  <ArrowRight className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-primary/40 md:block" />
-                )}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Partners() {
   const partners: { name: string; logo?: string }[] = [
