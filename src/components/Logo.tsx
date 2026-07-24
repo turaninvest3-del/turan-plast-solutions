@@ -11,7 +11,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
         <img
           src="/ЛОГО_ТУРАН.png"
           alt=""
-          className="h-full w-full object-contain p-0.5"
+          className="h-full w-full object-contain p-0.5 translate-y-[1px]"
         />
       </div>
       <div className="leading-tight">
