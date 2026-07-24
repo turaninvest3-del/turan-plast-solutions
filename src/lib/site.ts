@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = "https://wa.me/qr/XXU3FMFUF7HNB1";
+export const WHATSAPP_URL = "https://wa.me/77010120071";
 export const WHATSAPP_MSG =
   "Здравствуйте! Хочу уточнить наличие и цену на пакеты.";
 export const WHATSAPP_HREF = `${WHATSAPP_URL}?text=${encodeURIComponent(WHATSAPP_MSG)}`;
