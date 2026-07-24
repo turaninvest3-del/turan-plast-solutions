@@ -333,7 +333,7 @@ const PRODUCTS_STORE: Product[] = [
 ];
 
 const PRODUCTS_RESELL: Product[] = [
-  { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagHandle.url },
+  { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagHandle.url, price: "800" },
   { name: "Майка 400", size: "30 × 50 см", qty: "400 шт/уп.", purpose: "Крупная фасовка на полку" },
   { name: "Пакеты BIO", size: "уточняется", qty: "уточняется", purpose: "Биоразлагаемые пакеты" },
   { name: "Пакеты для заморозки", size: "уточняется", qty: "уточняется", purpose: "Для хранения и заморозки" },
