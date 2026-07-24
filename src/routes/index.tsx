@@ -539,52 +539,6 @@ function Partners() {
   );
 }
 
-function Reviews() {
-  const reviews = [
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-  ];
-  return (
-    <section id="reviews" className="bg-primary-soft/40 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <Reveal>
-          <SectionEyebrow>Отзывы</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
-            Что говорят наши клиенты
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {reviews.map((r, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <Card className="h-full border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-full bg-primary text-primary-foreground font-display text-lg font-bold">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground">{r.name}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {r.org} · {r.city}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-5 text-sm italic text-muted-foreground">
-                    [Текст отзыва — заменить реальной цитатой клиента о работе с
-                    Туран Инвест Пласт: гибкость партий, скорость доставки,
-                    качество пакетов.]
-                  </p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Faq() {
   const items = [
     { q: "Какой минимальный объём заказа?", a: "Жёстких минимальных тиражей нет. Минимальная сумма первой поставки — 20 000 ₸ для доставки по Алматы. Повторные заказы формируем под ваш оборот." },
