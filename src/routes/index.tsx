@@ -12,7 +12,6 @@ import {
   MapPin,
   Mail,
   Globe,
-  ArrowRight,
   Check,
   Package,
   ShoppingBag,
@@ -66,7 +65,6 @@ const NAV = [
   { href: "#products", label: "Продукция" },
   { href: "#why", label: "Преимущества" },
   { href: "#partners", label: "Партнёры" },
-  { href: "#reviews", label: "Отзывы" },
   { href: "#contacts", label: "Контакты" },
 ];
 
@@ -79,9 +77,7 @@ function LandingPage() {
         <About />
         <Products />
         <WhyUs />
-        <HowWeWork />
         <Partners />
-        <Reviews />
         <Faq />
         <Contacts />
       </main>
@@ -491,41 +487,6 @@ function WhyUs() {
   );
 }
 
-function HowWeWork() {
-  const steps = [
-    { n: "01", title: "Первый контакт", text: "Пишете в WhatsApp или звоните — уточняем задачи вашей точки." },
-    { n: "02", title: "Подбор ассортимента", text: "Собираем позиции под кассу, развес и полку с покупателями." },
-    { n: "03", title: "Первая поставка", text: "От 20 000 ₸. Отгружаем со склада в Алматы." },
-    { n: "04", title: "Закреплённый представитель", text: "Обходит точку, помогает планировать остатки." },
-    { n: "05", title: "Повторный заказ", text: "Одно сообщение — и заказ уже в работе." },
-  ];
-  return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <Reveal>
-          <SectionEyebrow>Как мы работаем</SectionEyebrow>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-extrabold md:text-4xl">
-            5 шагов от первого контакта до повторного заказа
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-4 md:grid-cols-5">
-          {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 80}>
-              <div className="relative h-full rounded-2xl border border-border bg-card p-5">
-                <div className="font-display text-3xl font-black text-primary/20">{s.n}</div>
-                <h3 className="mt-2 font-display text-base font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
-                {i < steps.length - 1 && (
-                  <ArrowRight className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-primary/40 md:block" />
-                )}
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Partners() {
   const partners: { name: string; logo?: string }[] = [
@@ -573,52 +534,6 @@ function Partners() {
             ))}
           </div>
         </Reveal>
-      </div>
-    </section>
-  );
-}
-
-function Reviews() {
-  const reviews = [
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-    { name: "[Имя, Фамилия]", org: "[Магазин / сеть]", city: "[Город]" },
-  ];
-  return (
-    <section id="reviews" className="bg-primary-soft/40 py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <Reveal>
-          <SectionEyebrow>Отзывы</SectionEyebrow>
-          <h2 className="mt-3 font-display text-3xl font-extrabold md:text-4xl">
-            Что говорят наши клиенты
-          </h2>
-        </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {reviews.map((r, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <Card className="h-full border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-12 w-12 place-items-center rounded-full bg-primary text-primary-foreground font-display text-lg font-bold">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground">{r.name}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {r.org} · {r.city}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-5 text-sm italic text-muted-foreground">
-                    [Текст отзыва — заменить реальной цитатой клиента о работе с
-                    Туран Инвест Пласт: гибкость партий, скорость доставки,
-                    качество пакетов.]
-                  </p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );
