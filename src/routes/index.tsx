@@ -12,7 +12,6 @@ import {
   MapPin,
   Mail,
   Globe,
-  ArrowRight,
   Check,
   Package,
   ShoppingBag,
@@ -66,7 +65,6 @@ const NAV = [
   { href: "#products", label: "Продукция" },
   { href: "#why", label: "Преимущества" },
   { href: "#partners", label: "Партнёры" },
-  { href: "#reviews", label: "Отзывы" },
   { href: "#contacts", label: "Контакты" },
 ];
 
@@ -79,9 +77,7 @@ function LandingPage() {
         <About />
         <Products />
         <WhyUs />
-        <HowWeWork />
         <Partners />
-        <Reviews />
         <Faq />
         <Contacts />
       </main>
