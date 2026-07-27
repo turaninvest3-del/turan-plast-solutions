@@ -42,7 +42,7 @@ import pricelistHero from "@/assets/pricelist-hero.jpg.asset.json";
 import magnumLogo from "@/assets/magnum.jpeg.asset.json";
 import toimartLogo from "@/assets/toimart.png.asset.json";
 import galmartLogo from "@/assets/galmart.webp.asset.json";
-const metroLogo = { url: "/assets/partners/Logo_METRO.svg.webp" };
+import metroLogo from "@/assets/metro.png.asset.json";
 import smallLogo from "@/assets/small.png.asset.json";
 import {
   WHATSAPP_HREF,
