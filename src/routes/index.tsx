@@ -36,14 +36,14 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { Logo } from "@/components/Logo";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
-import bagHandle from "@/assets/bag-handle.jpg.asset.json";
-import bagFlat from "@/assets/bag-flat.jpg.asset.json";
-import pricelistHero from "@/assets/pricelist-hero.jpg.asset.json";
-import magnumLogo from "@/assets/magnum.jpeg.asset.json";
-import toimartLogo from "@/assets/toimart.png.asset.json";
-import galmartLogo from "@/assets/galmart.webp.asset.json";
-import metroLogo from "@/assets/metro.png.asset.json";
-import smallLogo from "@/assets/small.png.asset.json";
+const bagHandle = { url: "/images/bag-handle.jpg" };
+const bagFlat = { url: "/images/bag-flat.jpg" };
+const pricelistHero = { url: "/images/pricelist-hero.jpg" };
+const magnumLogo = { url: "/images/magnum.jpeg" };
+const toimartLogo = { url: "/images/toimart.png" };
+const galmartLogo = { url: "/images/galmart.webp" };
+const metroLogo = { url: "/images/metro.png" };
+const smallLogo = { url: "/images/small.png" };
 import {
   WHATSAPP_HREF,
   PHONE_DISPLAY,
