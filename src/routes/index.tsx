@@ -36,8 +36,6 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { Logo } from "@/components/Logo";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
-const bagHandle = { url: "/images/bag-handle.jpg" };
-const bagFlat = { url: "/images/bag-flat.jpg" };
 const pricelistHero = { url: "/images/pricelist-hero.jpg" };
 const magnumLogo = { url: "/images/magnum.jpeg" };
 const toimartLogo = { url: "/images/toimart.png" };
@@ -317,28 +315,28 @@ type Product = {
 };
 
 const PRODUCTS_STORE: Product[] = [
-  { name: "Майка-бомба", size: "25 × 43 см", qty: "300 шт/рул.", purpose: "На кассу", price: "1700₸" },
+  { name: "Майка-бомба", size: "25 × 43 см", qty: "300 шт/рул.", purpose: "На кассу", price: "1700₸", image: "/images/products/maika-bomba.png" },
   { name: "Фасовка-бомба", size: "25 × 36 см", qty: "450 шт/рул.", purpose: "Расфасовка ", price: "1500₸" },
   { name: "Майка 30×50", size: "30 × 50 см", qty: "50 шт/уп.", purpose: "На кассу ", price: "400₸" },
-  { name: "Майка 500", size: "уточняется", qty: "500 шт/уп.", purpose: "На кассу", price: "1700₸" },
-  { name: "Фасовка 500", size: "уточняется", qty: "500 шт/уп.", purpose: "Расфасовка ", price: "1000₸" },
+  { name: "Майка 500", size: "уточняется", qty: "500 шт/уп.", purpose: "На кассу", price: "1700₸", image: "/images/products/maika-500.png" },
+  { name: "Фасовка 500", size: "уточняется", qty: "500 шт/уп.", purpose: "Расфасовка ", price: "1000₸", image: "/images/products/fasovka-500.jpg" },
   { name: "Мини-майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸" },
   { name: "Мини фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка мелкого товара", price: "550₸" },
 ];
 
 const PRODUCTS_RESELL: Product[] = [
-  { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagHandle.url, price: "800₸" },
+  { name: "Майка 200", size: "25 × 43 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: "/images/products/maika-200.jpg", price: "800₸" },
   { name: "Майка 400", size: "30 × 50 см", qty: "400 шт/уп.", purpose: "Крупная фасовка на полку", price: "1350₸" },
-  { name: "Пакеты BIO", size: "уточняется", qty: "уточняется", purpose: "Биоразлагаемые пакеты" },
-  { name: "Пакеты для заморозки", size: "уточняется", qty: "уточняется", purpose: "Для хранения и заморозки" },
-  { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: bagFlat.url, price: "500₸" },
+  { name: "Пакеты BIO", size: "уточняется", qty: "уточняется", purpose: "Биоразлагаемые пакеты", image: "/images/products/bio.jpg" },
+  { name: "Пакеты для заморозки", size: "уточняется", qty: "уточняется", purpose: "Для хранения и заморозки", image: "/images/products/zamorozka.jpg" },
+  { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", purpose: "Готовая упаковка на полку", image: "/images/products/fasovka-200.jpg", price: "500₸" },
   { name: "Мини-Майка", size: "20 × 34 см", qty: "уточняется", purpose: "На кассу — малый формат", price: "550₸" },
   { name: "Мини-Фасовка", size: "18 × 23 см", qty: "уточняется", purpose: "Мелкая расфасовка", price: "550₸" },
-  { name: "Пакет Садака", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку", price: "1800₸" },
-  { name: "Пакет SHIVAKI", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку" },
-  { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "уточняется", purpose: "Зип-пакеты для мелочи" },
-  { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "уточняется", purpose: "Зип-пакеты средние" },
-  { name: "Zip-Lock", size: "разные", qty: "по запросу", purpose: "Зип-пакеты, ассортимент" },
+  { name: "Пакет Садака", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку", price: "1800₸", image: "/images/products/sadaka.png" },
+  { name: "Пакет SHIVAKI", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку", image: "/images/products/shivaki.jpg" },
+  { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "уточняется", purpose: "Зип-пакеты для мелочи", image: "/images/products/zip-lock.jpg" },
+  { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "уточняется", purpose: "Зип-пакеты средние", image: "/images/products/zip-lock.jpg" },
+  { name: "Zip-Lock", size: "разные", qty: "по запросу", purpose: "Зип-пакеты, ассортимент", image: "/images/products/zip-lock.jpg" },
 
 ];
 
