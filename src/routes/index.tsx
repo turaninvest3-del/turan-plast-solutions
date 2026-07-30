@@ -407,7 +407,12 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                 <img
                   src={p.image}
                   alt={p.name}
-                  className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105 md:p-3"
+                  className={
+                    "h-full w-full object-contain transition-transform duration-500 group-hover:scale-105 " +
+                    (p.image.includes("Мини-Маика")
+                      ? "p-6 md:p-10"
+                      : "p-2 md:p-3")
+                  }
                   loading="lazy"
                 />
               ) : (
