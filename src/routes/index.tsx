@@ -401,16 +401,16 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
       {items.map((p, i) => (
         <Reveal key={p.name} delay={i * 60}>
           <Card className="group h-full overflow-hidden border-border transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-primary-soft/60">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-background">
               {p.image ? (
                 <img
                   src={p.image}
                   alt={p.name}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105 md:p-3"
                   loading="lazy"
                 />
               ) : (
-                <div className="grid h-full place-items-center text-primary/40">
+                <div className="grid h-full place-items-center bg-primary-soft/60 text-primary/40">
                   <Package className="h-9 w-9 md:h-16 md:w-16" strokeWidth={1.2} />
                 </div>
               )}
