@@ -337,7 +337,8 @@ const PRODUCTS_RESELL: Product[] = [
   { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "уточняется", purpose: "Зип-пакеты для мелочи", image: "/images/products/zip-lock.jpg" },
   { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "уточняется", purpose: "Зип-пакеты средние", image: "/images/products/zip-lock.jpg" },
   { name: "Zip-Lock", size: "разные", qty: "по запросу", purpose: "Зип-пакеты, ассортимент", image: "/images/products/zip-lock.jpg" },
-
+  { name: "Пакет Клубника", size: "уточняется", qty: "уточняется", purpose: "Готовая упаковка на полку" },
+  { name: "Пакет Кассовый", size: "уточняется", qty: "уточняется", purpose: "На кассу" },
 ];
 
 function Products() {
