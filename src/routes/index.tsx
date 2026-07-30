@@ -36,8 +36,6 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { Logo } from "@/components/Logo";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
-const bagHandle = { url: "/images/bag-handle.jpg" };
-const bagFlat = { url: "/images/bag-flat.jpg" };
 const pricelistHero = { url: "/images/pricelist-hero.jpg" };
 const magnumLogo = { url: "/images/magnum.jpeg" };
 const toimartLogo = { url: "/images/toimart.png" };
