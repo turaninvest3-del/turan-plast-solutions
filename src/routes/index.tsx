@@ -279,29 +279,29 @@ function About() {
           </ul>
         </Reveal>
         <Reveal delay={100}>
-          <div className="grid grid-cols-2 gap-4">
-            <StatCard label="Производство" value="Алматы" hint="ул. Земнухова 3Б" />
-            <StatCard label="Материал" value="HDPE" hint="100% первичный полиэтилен" />
-            <StatCard label="Партии" value="Гибкие" hint="от 20 000 ₸ на первую поставку" />
-            <StatCard label="Сертификат" value="ТР ТС" hint="005/2011 - пищевой HDPE" />
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <img
+              src="/images/production/extruders.png"
+              alt="Линия экструдеров производства полиэтиленовых пакетов"
+              loading="lazy"
+              className="col-span-2 h-48 w-full rounded-xl object-cover shadow-md md:h-60"
+            />
+            <img
+              src="/images/production/plenka.png"
+              alt="Процесс раздува полиэтиленовой плёнки"
+              loading="lazy"
+              className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
+            />
+            <img
+              src="/images/production/tsekh.jpeg"
+              alt="Здание производственного цеха «Туран Инвест Пласт»"
+              loading="lazy"
+              className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
+            />
           </div>
         </Reveal>
       </div>
     </section>
-  );
-}
-
-function StatCard({ label, value, hint }: { label: string; value: string; hint: string }) {
-  return (
-    <div className="rounded-xl border border-border bg-card p-5 transition-shadow hover:shadow-md">
-      <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-        {label}
-      </div>
-      <div className="mt-2 font-display text-2xl font-extrabold text-primary-deep">
-        {value}
-      </div>
-      <div className="mt-1 text-xs text-muted-foreground">{hint}</div>
-    </div>
   );
 }
 
