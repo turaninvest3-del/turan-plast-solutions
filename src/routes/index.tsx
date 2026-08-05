@@ -40,7 +40,7 @@ const pricelistHero = { url: "/images/pricelist-hero.jpg" };
 const magnumLogo = { url: "/images/magnum.jpeg" };
 const toimartLogo = { url: "/images/toimart.png" };
 const galmartLogo = { url: "/images/galmart.webp" };
-const metroLogo = { url: "/images/metro.png" };
+const metroLogo = { url: "/images/metro.webp" };
 const smallLogo = { url: "/images/small.png" };
 import {
   WHATSAPP_HREF,
