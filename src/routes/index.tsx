@@ -281,20 +281,20 @@ function About() {
         <Reveal delay={100}>
           <div className="grid grid-cols-2 gap-3 md:gap-4">
             <img
-              src="/images/production/extruders.png"
-              alt="Линия экструдеров производства полиэтиленовых пакетов"
+              src="/images/production/tsekh.jpeg"
+              alt="Здание производственного цеха «Туран Инвест Пласт»"
               loading="lazy"
               className="col-span-2 h-48 w-full rounded-xl object-cover shadow-md md:h-60"
             />
             <img
-              src="/images/production/plenka.png"
-              alt="Процесс раздува полиэтиленовой плёнки"
+              src="/images/production/extruders.png"
+              alt="Линия экструдеров производства полиэтиленовых пакетов"
               loading="lazy"
               className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
             />
             <img
-              src="/images/production/tsekh.jpeg"
-              alt="Здание производственного цеха «Туран Инвест Пласт»"
+              src="/images/production/plenka.png"
+              alt="Процесс раздува полиэтиленовой плёнки"
               loading="lazy"
               className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
             />
