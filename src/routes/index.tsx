@@ -210,20 +210,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={120} className="relative hidden md:block">
-          <div className="relative mx-auto grid aspect-[4/5] w-full max-w-md grid-rows-2 gap-[5px] overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-2xl">
-            <img
-              src="/images/bag-handle.jpg"
-              alt="Пакеты-майки с ручками Туран Инвест Пласт"
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-            <img
-              src="/images/bag-flat.jpg"
-              alt="Фасовочные пакеты без ручек Туран Инвест Пласт"
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
+          <HeroMarquee />
           <div className="absolute -bottom-4 -left-4 hidden rounded-xl bg-background p-4 text-foreground shadow-xl md:block">
             <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Первая поставка
