@@ -312,7 +312,7 @@ function About() {
           </div>
 
           {/* Mobile: production photo collage */}
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-white shadow-md md:hidden">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-white shadow-md md:hidden">
             <div className="grid h-full w-full grid-cols-2 grid-rows-[1.2fr_1fr] gap-3 p-3">
               <img
                 src="/images/production/tsekh.jpeg"
