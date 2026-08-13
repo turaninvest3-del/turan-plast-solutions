@@ -241,7 +241,7 @@ function HeroInner() {
         </Reveal>
 
         <Reveal delay={120} className="relative hidden md:block">
-          <HeroMarquee />
+          <HeroCollage />
           <div className="absolute -bottom-4 -left-4 hidden rounded-xl bg-background p-4 text-foreground shadow-xl md:block">
             <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Первая поставка
