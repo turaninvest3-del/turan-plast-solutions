@@ -337,7 +337,7 @@ function About() {
               src="/images/production/tsekh.jpeg"
               alt="Здание производственного цеха «Туран Инвест Пласт»"
               loading="lazy"
-              className="col-span-2 h-48 w-full rounded-xl object-cover shadow-md md:h-60"
+              className="col-span-2 h-48 w-full rounded-xl object-cover object-bottom shadow-md md:h-60"
             />
             <img
               src="/images/production/extruders.png"
@@ -349,7 +349,7 @@ function About() {
               src="/images/production/plenka.png"
               alt="Процесс раздува полиэтиленовой плёнки"
               loading="lazy"
-              className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
+              className="h-40 w-full rounded-xl object-cover object-bottom shadow-md md:h-44"
             />
           </div>
         </Reveal>
