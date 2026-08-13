@@ -303,24 +303,10 @@ function About() {
         </Reveal>
         <Reveal delay={100}>
           <div className="grid grid-cols-2 gap-3 md:gap-4">
-            <img
-              src="/images/production/tsekh.jpeg"
-              alt="Здание производственного цеха «Туран Инвест Пласт»"
-              loading="lazy"
-              className="col-span-2 h-48 w-full rounded-xl object-cover object-bottom shadow-md md:h-60"
-            />
-            <img
-              src="/images/production/extruders.png"
-              alt="Линия экструдеров производства полиэтиленовых пакетов"
-              loading="lazy"
-              className="h-40 w-full rounded-xl object-cover shadow-md md:h-44"
-            />
-            <img
-              src="/images/production/plenka.png"
-              alt="Процесс раздува полиэтиленовой плёнки"
-              loading="lazy"
-              className="h-40 w-full rounded-xl object-cover object-bottom shadow-md md:h-44"
-            />
+            <StatCard icon={MapPin} title="Производство" value="Алматы, ул. Земнухова 3Б" />
+            <StatCard icon={ShieldCheck} title="Материал" value="HDPE, 100% первичный полиэтилен" />
+            <StatCard icon={Truck} title="Партии" value="Гибкие, от 20 000 ₸ на первую поставку" />
+            <StatCard icon={Check} title="Сертификат" value="ТР ТС, 005/2011 - пищевой HDPE" />
           </div>
         </Reveal>
       </div>
