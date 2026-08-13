@@ -160,58 +160,28 @@ function Hero() {
   return <HeroInner />;
 }
 
-const MARQUEE_ROWS: string[][] = [
-  [
-    "/images/bag-handle.jpg",
-    "/images/products/maika-bomba.png",
-    "/images/products/maika-500.png",
-    "/images/products/maika-200.jpg",
-    "/images/products/Мини-Маика.png",
-  ],
-  [
-    "/images/bag-flat.jpg",
-    "/images/products/fasovka-500.jpg",
-    "/images/products/fasovka-200.jpg",
-    "/images/products/Мини-Фасовка.png",
-    "/images/products/zip-lock.jpg",
-  ],
-  [
-    "/images/products/bio.jpg",
-    "/images/products/zamorozka.jpg",
-    "/images/products/sadaka.png",
-    "/images/products/shivaki.jpg",
-    "/images/products/Клубника.jpg",
-    "/images/products/Кассовые.jpg",
-  ],
-];
-
-function HeroMarquee() {
+function HeroCollage() {
   return (
     <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-2xl">
-      <div className="flex h-full w-full -rotate-[6deg] scale-125 flex-col justify-center gap-3">
-        {MARQUEE_ROWS.map((row, i) => (
-          <div key={i} className="overflow-hidden">
-            <div
-              className={`flex w-max gap-3 ${
-                i === 1 ? "marquee-track-right" : "marquee-track-left"
-              }`}
-            >
-              {[...row, ...row].map((src, j) => (
-                <div
-                  key={j}
-                  className="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-background shadow-lg"
-                >
-                  <img
-                    src={src}
-                    alt="Продукция Туран Инвест Пласт"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+      <div className="grid h-full w-full grid-cols-2 grid-rows-[1.2fr_1fr] gap-3 p-3">
+        <img
+          src="/images/production/tsekh.jpeg"
+          alt="Здание производственного цеха «Туран Инвест Пласт»"
+          loading="lazy"
+          className="col-span-2 h-full w-full rounded-xl object-cover object-bottom"
+        />
+        <img
+          src="/images/production/extruders.png"
+          alt="Линия экструдеров производства полиэтиленовых пакетов"
+          loading="lazy"
+          className="h-full w-full rounded-xl object-cover"
+        />
+        <img
+          src="/images/production/plenka.png"
+          alt="Процесс раздува полиэтиленовой плёнки"
+          loading="lazy"
+          className="h-full w-full rounded-xl object-cover object-bottom"
+        />
       </div>
     </div>
   );
