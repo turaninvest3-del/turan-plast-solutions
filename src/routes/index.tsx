@@ -303,11 +303,36 @@ function About() {
           </ul>
         </Reveal>
         <Reveal delay={100}>
-          <div className="grid grid-cols-2 gap-3 md:gap-4">
+          {/* Desktop: stat cards */}
+          <div className="hidden grid-cols-2 gap-3 md:grid md:gap-4">
             <StatCard icon={MapPin} title="Производство" value="Алматы, ул. Земнухова 3Б" />
             <StatCard icon={ShieldCheck} title="Материал" value="HDPE, 100% первичный полиэтилен" />
             <StatCard icon={Truck} title="Партии" value="Гибкие, от 20 000 ₸ на первую поставку" />
             <StatCard icon={Check} title="Сертификат" value="ТР ТС, 005/2011 - пищевой HDPE" />
+          </div>
+
+          {/* Mobile: production photo collage */}
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-white shadow-md md:hidden">
+            <div className="grid h-full w-full grid-cols-2 grid-rows-[1.2fr_1fr] gap-3 p-3">
+              <img
+                src="/images/production/tsekh.jpeg"
+                alt="Здание производственного цеха «Туран Инвест Пласт»"
+                loading="lazy"
+                className="col-span-2 h-full w-full rounded-xl object-cover object-bottom"
+              />
+              <img
+                src="/images/production/extruders.png"
+                alt="Линия экструдеров производства полиэтиленовых пакетов"
+                loading="lazy"
+                className="h-full w-full rounded-xl object-cover"
+              />
+              <img
+                src="/images/production/plenka.png"
+                alt="Процесс раздува полиэтиленовой плёнки"
+                loading="lazy"
+                className="h-full w-full rounded-xl object-cover object-bottom"
+              />
+            </div>
           </div>
         </Reveal>
       </div>
