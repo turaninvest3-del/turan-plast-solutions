@@ -368,11 +368,11 @@ const PRODUCTS_RESELL: Product[] = [
   { name: "Мини-Майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸", image: "/images/products/Мини-Маика.png" },
   { name: "Мини-Фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка", price: "550₸", image: "/images/products/Мини-Фасовка.png" },
   { name: "Пакет Садака", size: "50 × 70 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", price: "1800₸", image: "/images/products/sadaka.png" },
-  { name: "Пакет SHIVAKI", size: "50 × 70 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/shivaki.jpg" },
+  { name: "Пакет SHIVAKI", size: "50 × 70 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/shivaki.jpg", price: "1000₸" },
   { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "300₸" },
   { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "810₸" },
   { name: "Zip-Lock 20×27", size: "20 × 27 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "950₸" },
-  { name: "Пакет Клубника", size: "уточняется", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/Клубника.jpg" },
+  { name: "Пакет Клубника", size: "34 × 60 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/Клубника.jpg", price: "750₸" },
   { name: "Пакет Кассовый", size: "уточняется", qty: "20 шт/уп.", purpose: "На кассу", image: "/images/products/Кассовые.jpg" },
 ];
 
