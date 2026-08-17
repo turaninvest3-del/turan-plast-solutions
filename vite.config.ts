@@ -8,13 +8,11 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Prerender the landing page as a static HTML file for plain hosting.
-    pages: [{ path: "/" }],
-    prerender: { enabled: true, crawlLinks: false },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
 });
+
 
 
