@@ -355,8 +355,8 @@ const PRODUCTS_STORE: Product[] = [
   { name: "Майка 30×50", size: "30 × 50 см", qty: "50 шт/уп.", purpose: "На кассу", price: "400₸", image: "/images/products/maika-30-50.png" },
   { name: "Майка 500", size: "25 × 43 см", qty: "500 шт/уп.", purpose: "На кассу", price: "1700₸", image: "/images/products/maika-500.png" },
   { name: "Фасовка 500", size: "25 × 38 см", qty: "500 шт/уп.", purpose: "Расфасовка", price: "1000₸", image: "/images/products/fasovka-500.jpg" },
-  { name: "Мини-майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸", image: "/images/products/Мини-Маика.png" },
-  { name: "Мини фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка", price: "550₸", image: "/images/products/Мини-Фасовка.png" },
+  { name: "Мини-майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸", image: "/images/products/mini-maika.png" },
+  { name: "Мини фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка", price: "550₸", image: "/images/products/mini-fasovka.png" },
 ];
 
 const PRODUCTS_RESELL: Product[] = [
@@ -365,15 +365,15 @@ const PRODUCTS_RESELL: Product[] = [
   { name: "Пакеты BIO", size: "25 × 43 см", qty: "100 шт/уп.", purpose: "Биоразлагаемые", image: "/images/products/bio.jpg", price: "1250₸" },
   { name: "Пакеты для заморозки", size: "30 × 40 см", qty: "50 шт/уп.", purpose: "Для заморозки", image: "/images/products/zamorozka.jpg", price: "520₸" },
   { name: "Фасовка 200", size: "25 × 38 см", qty: "200 шт/уп.", purpose: "Расфасовка", image: "/images/products/fasovka-200.jpg", price: "770₸" },
-  { name: "Мини-Майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸", image: "/images/products/Мини-Маика.png" },
-  { name: "Мини-Фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка", price: "550₸", image: "/images/products/Мини-Фасовка.png" },
+  { name: "Мини-Майка", size: "20 × 34 см", qty: "180 шт/рул.", purpose: "На кассу", price: "550₸", image: "/images/products/mini-maika.png" },
+  { name: "Мини-Фасовка", size: "18 × 23 см", qty: "250 шт/рул.", purpose: "Расфасовка", price: "550₸", image: "/images/products/mini-fasovka.png" },
   { name: "Пакет Садака", size: "50 × 70 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", price: "1800₸", image: "/images/products/sadaka.png" },
   { name: "Пакет SHIVAKI", size: "50 × 70 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/shivaki.jpg", price: "2000₸" },
   { name: "Zip-Lock 8×12", size: "8 × 12 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "300₸" },
   { name: "Zip-Lock 16×24", size: "16 × 24 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "810₸" },
   { name: "Zip-Lock 20×27", size: "20 × 27 см", qty: "100 шт/уп.", purpose: "Зип-пакет", image: "/images/products/zip-lock.jpg", price: "950₸" },
-  { name: "Пакет Клубника", size: "34 × 60 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/Клубника.jpg", price: "750₸" },
-  { name: "Пакет Кассовый", size: "уточняется", qty: "20 шт/уп.", purpose: "На кассу", image: "/images/products/Кассовые.jpg" },
+  { name: "Пакет Клубника", size: "34 × 60 см", qty: "50 шт/уп.", purpose: "Готовая упаковка", image: "/images/products/klubnika.jpg", price: "750₸" },
+  { name: "Пакет Кассовый", size: "уточняется", qty: "20 шт/уп.", purpose: "На кассу", image: "/images/products/kassovye.jpg" },
 ];
 
 function Products() {
@@ -444,7 +444,7 @@ function ProductGrid({ items, badge }: { items: Product[]; badge: string }) {
                   alt={p.name}
                   className={
                     "h-full w-full object-contain transition-transform duration-500 group-hover:scale-105 " +
-                    (p.image.includes("Мини-Маика")
+                    (p.image.includes("mini-maika")
                       ? "p-6 md:p-10"
                       : "p-2 md:p-3")
                   }
