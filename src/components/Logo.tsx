@@ -9,7 +9,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
         aria-hidden
       >
         <img
-          src="/ЛОГО_ТУРАН.png"
+          src="/images/logo.png"
           alt=""
           className="h-full w-full object-contain p-0.5 translate-y-[1px]"
         />
